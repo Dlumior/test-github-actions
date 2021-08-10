@@ -10,9 +10,9 @@ const MainLayout = ({ children }: MainLayoutProps) => (
   <div>
     <ul>
       {routeList.map((item) => (
-        <Link key={item.title} to={item.path}>
-          {item.title}
-        </Link>
+        <li key={item.id}>
+          <Link to={item.path}>{item.title}</Link>
+        </li>
       ))}
     </ul>
     {children}

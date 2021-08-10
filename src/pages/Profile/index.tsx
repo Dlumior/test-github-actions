@@ -1,5 +1,10 @@
 import React from "react";
+import MainLayout from "../../layout/MainLayout";
 
-const Profile = () => <h1>Profile</h1>;
+const Profile = () => (
+  <MainLayout>
+    <h1>Profile</h1>
+  </MainLayout>
+);
 
 export default Profile;
