@@ -15,7 +15,7 @@ const AppRouter = () => (
   <ProvideAuth>
     <Router basename={import.meta.env.PROD ? import.meta.env.BASE_URL : ""}>
       <Switch>
-        <PrivateRoute component={Profile} path={ROUTES.PROFILE} />
+        <PrivateRoute Component={Profile} path={ROUTES.PROFILE} />
         <PublicRoute component={About} path={ROUTES.ABOUT} />
         <PublicRoute component={Login} path={ROUTES.LOGIN} />
         <PublicRoute component={HomePage} path={ROUTES.HOME} />

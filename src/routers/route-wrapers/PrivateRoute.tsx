@@ -6,12 +6,12 @@ import { useAuth } from "../../hooks/useAuth";
 import { HOME, PRIVATE } from "../routes";
 
 type PrivateRouteProps = {
-  component: React.FC;
+  Component: React.FC;
   path: string;
 };
 
 const PrivateRoute = ({
-  component,
+  Component,
   path = PRIVATE,
   ...rest
 }: PrivateRouteProps) => {
@@ -24,7 +24,7 @@ const PrivateRoute = ({
       path={path}
       render={({ location }) =>
         auth?.user?.isAuthenticated ? (
-          component
+          <Component />
         ) : (
           <Redirect
             to={{
