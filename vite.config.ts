@@ -12,7 +12,7 @@ export default ({ command, mode }) => {
   if (mode === 'production') {
     return {
       plugins: [reactRefresh()],
-      base: "/vite-config/"
+      base: "/test-github-actions/"
     }
   } else {
     return {
